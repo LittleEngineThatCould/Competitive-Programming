@@ -27,6 +27,7 @@ public:
             carry = (int)(tmp[i] >= 10);
             if(carry) tmp[i] -= 10;
             carry = (int)(tmp[i] >= 100000000);
+            if(carry) tmp[i] -= 100000000;
         }
         BigInt ans;
         ans.v = tmp;
