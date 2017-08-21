@@ -24,8 +24,6 @@ public:
         {
             if(i > mx-1) tmp.pb(0);
             tmp[i] = (i > a.v.size()-1 ? 0: a.v[i]) + (i > this->v.size()-1 ? 0 : this->v[i]) + carry;
-            carry = (int)(tmp[i] >= 10);
-            if(carry) tmp[i] -= 10;
             carry = (int)(tmp[i] >= 100000000);
             if(carry) tmp[i] -= 100000000;
         }
